@@ -120,6 +120,45 @@ img {
   color: var(--text);
 }
 
+@media (min-width: 921px) {
+  .site-header {
+    position: fixed;
+    inset: 0 auto 0 0;
+    width: 232px;
+    border-right: 1px solid rgba(216, 224, 230, 0.8);
+    border-bottom: 0;
+  }
+
+  .nav-shell {
+    align-items: flex-start;
+    flex-direction: column;
+    justify-content: flex-start;
+    width: auto;
+    height: 100%;
+    margin: 0;
+    padding: 28px 24px;
+  }
+
+  .brand {
+    margin-bottom: 34px;
+  }
+
+  .nav-links {
+    display: grid;
+    width: 100%;
+    gap: 8px;
+  }
+
+  .nav-links a {
+    width: 100%;
+    padding: 10px 12px;
+  }
+
+  main {
+    margin-left: 232px;
+  }
+}
+
 .section-shell {
   width: min(100% - 32px, var(--max-width));
   margin: 0 auto;
