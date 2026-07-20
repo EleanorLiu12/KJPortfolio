@@ -121,9 +121,12 @@
         <div class="experience-list">
           <article class="experience-card">
             <div class="experience-header">
-              <p class="experience-period">May 2026 - Present</p>
-              <h3>Software Development Engineer Intern, Agentic Tooling</h3>
-              <p class="experience-company">Amazon | Prime Video</p>
+              <img class="experience-logo" src="assets/prime-video-logo.png" alt="Prime Video logo" width="48" height="48">
+              <div class="experience-heading-text">
+                <p class="experience-period">May 2026 - Present</p>
+                <h3>Software Development Engineer Intern, Agentic Tooling</h3>
+                <p class="experience-company">Amazon | Prime Video</p>
+              </div>
             </div>
             <ul>
               <li>Built an LLM-powered self-service onboarding workflow using ReAct-style reasoning and tool use.</li>
@@ -140,9 +143,12 @@
 
           <article class="experience-card">
             <div class="experience-header">
-              <p class="experience-period">May 2025 - Aug 2025</p>
-              <h3>Software Development Engineer Intern, CI/CD Analytics</h3>
-              <p class="experience-company">Amazon | Prime Video</p>
+              <img class="experience-logo" src="assets/prime-video-logo.png" alt="Prime Video logo" width="48" height="48">
+              <div class="experience-heading-text">
+                <p class="experience-period">May 2025 - Aug 2025</p>
+                <h3>Software Development Engineer Intern, CI/CD Analytics</h3>
+                <p class="experience-company">Amazon | Prime Video</p>
+              </div>
             </div>
             <ul>
               <li>Designed and launched a CI/CD analytics platform for deployment health reporting across Prime Video services.</li>
@@ -190,38 +196,40 @@
           <h2 id="work-title">Selected public projects</h2>
         </div>
 
-        <div class="project-feature">
-          <article class="project-card">
-            <div class="project-meta">
-              <span>LLM Inference</span>
-              <span>FastAPI + React</span>
-              <span>PyTorch</span>
-            </div>
-            <h3>LLM Decoding Visualizer</h3>
-            <p>
-              Interactive full-stack visualizer for transformer decoding. It helps users inspect
-              logits, probability distributions, and token selection while experimenting with
-              temperature, softmax normalization, top-k sampling, and top-p sampling.
-            </p>
-            <a href="https://eleanorliu12.github.io/softmax-decoding-visualizer/" target="_blank" rel="noopener noreferrer">
-              View site
-            </a>
-          </article>
-          <a
-            class="project-visual-link"
-            href="https://eleanorliu12.github.io/softmax-decoding-visualizer/"
-            target="_blank"
-            rel="noopener noreferrer"
-            aria-label="Open the LLM Decoding Visualizer"
-          >
-            <img
-              src="assets/lm-decoding-visualizer.jpg"
-              alt="Side-by-side bar charts showing raw model logits transformed into softmax probabilities across candidate tokens"
-              width="900"
-              height="321"
-              loading="lazy"
+        <div class="project-grid single-project">
+          <article class="project-card has-visual">
+            <a
+              class="project-visual"
+              href="https://eleanorliu12.github.io/softmax-decoding-visualizer/"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Open the LLM Decoding Visualizer"
             >
-          </a>
+              <img
+                src="assets/lm-decoding-visualizer.png"
+                alt="Side-by-side bar charts showing raw model logits transformed into softmax probabilities across candidate tokens"
+                width="2000"
+                height="696"
+                loading="lazy"
+              >
+            </a>
+            <div class="project-body">
+              <div class="project-meta">
+                <span>LLM Inference</span>
+                <span>FastAPI + React</span>
+                <span>PyTorch</span>
+              </div>
+              <h3>LLM Decoding Visualizer</h3>
+              <p>
+                Interactive full-stack visualizer for transformer decoding. It helps users inspect
+                logits, probability distributions, and token selection while experimenting with
+                temperature, softmax normalization, top-k sampling, and top-p sampling.
+              </p>
+              <a href="https://eleanorliu12.github.io/softmax-decoding-visualizer/" target="_blank" rel="noopener noreferrer">
+                View site
+              </a>
+            </div>
+          </article>
         </div>
       </section>
 
