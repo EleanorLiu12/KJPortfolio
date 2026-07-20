@@ -19,8 +19,6 @@ const fallbackRepos = [
 ];
 
 const repoList = document.querySelector("#repo-list");
-const repoCount = document.querySelector("#repo-count");
-const githubSince = document.querySelector("#github-since");
 const year = document.querySelector("#year");
 
 if (year) {
@@ -67,30 +65,18 @@ function selectRepos(repos) {
   return chosen.slice(0, 4);
 }
 
-async function loadGitHubProfile() {
-  const [profileResponse, repoResponse] = await Promise.all([
-    fetch(`https://api.github.com/users/${GITHUB_USERNAME}`),
-    fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=100`),
-  ]);
+async function loadGitHubRepos() {
+  const repoResponse = await fetch(`https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=100`);
 
-  if (!profileResponse.ok || !repoResponse.ok) {
+  if (!repoResponse.ok) {
     throw new Error("GitHub API request failed");
   }
 
-  const profile = await profileResponse.json();
   const repos = await repoResponse.json();
-
-  if (repoCount && typeof profile.public_repos === "number") {
-    repoCount.textContent = String(profile.public_repos);
-  }
-
-  if (githubSince && profile.created_at) {
-    githubSince.textContent = String(new Date(profile.created_at).getFullYear());
-  }
 
   renderRepos(selectRepos(repos));
 }
 
-loadGitHubProfile().catch(() => {
+loadGitHubRepos().catch(() => {
   renderRepos(fallbackRepos);
 });
