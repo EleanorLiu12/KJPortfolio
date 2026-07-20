@@ -592,18 +592,6 @@ div.contact-card:hover {
   box-shadow: none;
 }
 
-.site-footer {
-  width: min(100% - 32px, var(--max-width));
-  margin: 0 auto;
-  border-top: 1px solid var(--line);
-  color: var(--muted);
-  padding: 24px 0 36px;
-}
-
-.site-footer p {
-  margin: 0;
-}
-
 :focus-visible {
   outline: 3px solid rgba(15, 118, 110, 0.35);
   outline-offset: 3px;
@@ -714,8 +702,7 @@ div.contact-card:hover {
 
 @media (max-width: 430px) {
   .section-shell,
-  .nav-shell,
-  .site-footer {
+  .nav-shell {
     width: min(100% - 24px, var(--max-width));
   }
 

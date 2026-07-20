@@ -19,11 +19,6 @@ const fallbackRepos = [
 ];
 
 const repoList = document.querySelector("#repo-list");
-const year = document.querySelector("#year");
-
-if (year) {
-  year.textContent = String(new Date().getFullYear());
-}
 
 function buildRepoItem(repo) {
   const item = document.createElement("article");
