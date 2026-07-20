@@ -376,14 +376,12 @@ h3 {
   grid-template-columns: minmax(0, 760px);
 }
 
-.project-card.has-visual {
-  padding: 0;
-  overflow: hidden;
-}
-
 .project-visual {
   display: block;
-  border-bottom: 1px solid var(--line);
+  margin: 4px 0 20px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
   background: var(--surface);
 }
 
@@ -393,13 +391,6 @@ h3 {
   height: auto;
   aspect-ratio: 1937 / 624;
   object-fit: contain;
-}
-
-.project-body {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-  padding: 24px;
 }
 
 .focus-item,
