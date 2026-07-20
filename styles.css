@@ -338,6 +338,7 @@ h3 {
 }
 
 .focus-item,
+.experience-card,
 .project-card,
 .repo-item {
   border: 1px solid var(--line);
@@ -374,9 +375,60 @@ h3 {
 }
 
 .focus-item p,
+.experience-card p,
+.experience-card li,
 .project-card p,
 .repo-item p {
   color: var(--muted);
+}
+
+.experience-list {
+  display: grid;
+  gap: 16px;
+}
+
+.experience-card {
+  padding: 24px;
+}
+
+.experience-header {
+  margin-bottom: 16px;
+}
+
+.experience-period {
+  margin-bottom: 8px;
+  color: var(--teal);
+  font-size: 0.82rem;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+.experience-company {
+  margin-bottom: 0;
+  font-weight: 750;
+}
+
+.experience-card ul {
+  display: grid;
+  gap: 10px;
+  margin: 0 0 18px;
+  padding-left: 20px;
+}
+
+.experience-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.experience-tags span {
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: rgba(15, 118, 110, 0.08);
+  color: var(--teal);
+  font-size: 0.78rem;
+  font-weight: 750;
+  padding: 4px 9px;
 }
 
 .project-card {
