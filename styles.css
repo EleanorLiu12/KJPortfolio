@@ -376,6 +376,36 @@ h3 {
   grid-template-columns: minmax(0, 760px);
 }
 
+.project-feature {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: 24px;
+  align-items: stretch;
+}
+
+.project-visual-link {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--surface);
+  box-shadow: 0 1px 0 rgba(23, 32, 42, 0.03);
+  transition: border-color 160ms ease, transform 160ms ease, box-shadow 160ms ease;
+}
+
+.project-visual-link:hover {
+  transform: translateY(-3px);
+  border-color: #bac7cf;
+  box-shadow: var(--shadow);
+}
+
+.project-visual-link img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 .focus-item,
 .experience-card,
 .project-card,
@@ -656,8 +686,13 @@ div.contact-card:hover {
   }
 
   .focus-grid,
-  .project-grid {
+  .project-grid,
+  .project-feature {
     grid-template-columns: 1fr;
+  }
+
+  .project-feature {
+    gap: 16px;
   }
 
   .focus-item,
