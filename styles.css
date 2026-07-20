@@ -333,6 +333,10 @@ h3 {
   gap: 16px;
 }
 
+.project-grid.single-project {
+  grid-template-columns: minmax(0, 760px);
+}
+
 .focus-item,
 .project-card,
 .repo-item {
